@@ -64,13 +64,6 @@ p{
     text-align: center;
 }
 
-p_1
-{
-    color: black;
-    font-size:18px;
-    text-align: center;
-}
-
 .field {
     display: flex;
     justify-content: space-around;

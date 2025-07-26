@@ -14,76 +14,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>アイコン→スライドメニュー</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-    }
-
-    /* チェックボックスを非表示 */
-    #sidebar-toggle {
-      display: none;
-    }
-
-    /* ハンバーガー／クローズアイコン */
-    .sidebar-icon {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      width: 32px;
-      height: 32px;
-      cursor: pointer;
-      z-index: 1001;
-    }
-    /* ハンバーガーアイコン */
-    .sidebar-icon::before {
-      content: "≡";
-      font-size: 320px;
-      line-height: 320px;
-      display: block;
-      text-align: center;
-    }
-    /* チェックされると「✕」に変える */
-    #sidebar-toggle:checked + .sidebar-icon::before {
-      content: "✕";
-    }
-
-    /* サイドバー本体 */
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: -100vw;            /* 画面外に完全に隠す */
-      width: 100vw;            /* 画面幅いっぱい */
-      height: 100vh;           /* 画面高さいっぱい */
-      background: #fff;
-      transition: left 0.3s ease;
-      z-index: 1000;
-    }
-
-    /* open クラスで画面に表示 */
-    .sidebar.open {
-      left: 0;
-    }
-
-    /* チェックされたらスライドイン */
-    #sidebar-toggle:checked ~ .sidebar {
-      left: 0;
-    }
-
-    .sidebar ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    .sidebar li {
-      margin: 0;
-      padding: 0.5em 1em;
-    }
-    .sidebar a {
-      text-decoration: none;
-      color: #333;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- 1. トグル用のチェックボックス -->
@@ -95,10 +26,10 @@
   <!-- 3. サイドバー本体 -->
   <nav class="sidebar">
     <ul>
-      <p><a href="Guide_Map.html">情報棟マップ</a></p>
-      <p><a href="Exhibit_Introduction.html">展示紹介</a></p>
-      <p><a href="Comment.html">学科展総括のありがたいお言葉</a></p>
-      <p><a href="#place">アンケート</a></p>
+      <p><a href="Guide_Map.html" style="font-size: 45px;">情報棟マップ</a></p>
+      <p><a href="Exhibit_Introduction.html" style="font-size: 45px;">展示紹介</a></p>
+      <p><a href="Comment.html" style="font-size: 45px;">学科展総括のありがたいお言葉</a></p>
+      <p><a href="#place" style="font-size: 45px;">アンケート</a></p>
     </ul>
   </nav>
 </body>
@@ -121,7 +52,7 @@
 
     <section>
         <h3>アンケート</h3>
-        <p_1>今回の展示への感想をお聞かせください。今後の参考にいたします。</p_1>
+        <p>今回の展示への感想をお聞かせください。今後の参考にいたします。</p>
     </section>
 
   </div>

@@ -1,0 +1,72 @@
+/* css/style.css */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* チェックボックスを非表示 */
+#sidebar-toggle {
+  display: none;
+}
+
+/* ハンバーガー／クローズアイコン */
+.sidebar-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* ハンバーガーアイコン */
+.sidebar-icon::before {
+  content: "≡";
+  font-size: 320px;
+  line-height: 320px;
+  display: block;
+  text-align: center;
+}
+
+/* チェックされると「✕」に変える */
+#sidebar-toggle:checked + .sidebar-icon::before {
+  content: "✕";
+}
+
+/* サイドバー本体 */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100vw;     /* 画面外に完全に隠す */
+  width: 100vw;     /* 画面幅いっぱい */
+  height: 100vh;    /* 画面高さいっぱい */
+  background: #ff0;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  display: grid;
+  place-items: center;  /* 横・縦とも中央揃え */
+}
+
+/* チェックされたらスライドイン */
+#sidebar-toggle:checked ~ .sidebar {
+  left: 0;
+}
+
+/* リスト装飾のリセット */
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* メニューアイテム */
+.sidebar li {
+  padding: 0.5em 1em;
+}
+
+/* リンクスタイル */
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+}
