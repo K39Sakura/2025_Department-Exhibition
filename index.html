@@ -8,19 +8,108 @@
     <link rel="stylesheet" href="test.css" />
     <title>第61回 苫小牧高専 学校祭 情報科学・工学系 学科展</title>
   </head>
-  <body background="photo\background.png">
-    <div style="background-color: rgba(255, 250, 234, 0.7); padding: 60px; max-width: 600px; margin: 0 auto;">
+  <body>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>アイコン→スライドメニュー</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    /* チェックボックスを非表示 */
+    #sidebar-toggle {
+      display: none;
+    }
+
+    /* ハンバーガー／クローズアイコン */
+    .sidebar-icon {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+    /* ハンバーガーアイコン */
+    .sidebar-icon::before {
+      content: "≡";
+      font-size: 32px;
+      line-height: 32px;
+      display: block;
+      text-align: center;
+    }
+    /* チェックされると「✕」に変える */
+    #sidebar-toggle:checked + .sidebar-icon::before {
+      content: "✕";
+    }
+
+    /* サイドバー本体 */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -240px;           /* 初期は左に隠す */
+      width: 240px;
+      height: 100%;
+      background: #fff;
+      border-right: 1px solid #ccc;
+      padding-top: 60px;
+      box-sizing: border-box;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    /* チェックされたらスライドイン */
+    #sidebar-toggle:checked ~ .sidebar {
+      left: 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .sidebar li {
+      margin: 0;
+      padding: 0.5em 1em;
+    }
+    .sidebar a {
+      text-decoration: none;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- 1. トグル用のチェックボックス -->
+  <input type="checkbox" id="sidebar-toggle" aria-label="Toggle menu">
+
+  <!-- 2. アイコンラベル -->
+  <label for="sidebar-toggle" class="sidebar-icon" role="button" aria-hidden="true"></label>
+
+  <!-- 3. サイドバー本体 -->
+  <nav class="sidebar">
+    <ul>
+      <li><a href="Guide_Map.html">情報棟マップ</a></li>
+      <li><a href="Exhibit_Introduction.html">展示紹介</a></li>
+      <li><a href="Comment.html">学科展総括のありがたいお言葉</a></li>
+      <li><a href="#place">アンケート</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
+
+    <div style="background-color: rgba(255, 250, 234, 0.0); padding: 60px; max-width: 600px; margin: 0 auto;">
     <h2 class="title">第61回 苫小牧高専 学校祭</h2>
     <h1 class="title">情報科学・工学系 学科展</h1>
+
     <section>
         <h3>日程</h3>
         <p>2025年10月18日(土) 10:30～16:00</p>
         <p>10月19日(日) 9:00～15:00</p>
-    </section>
-
-    <section>
-        <h3>学科展総括のありがたいお言葉</h3>
-        <p>～総括のありがたいお言葉～</p>
     </section>
 
     <section>
@@ -33,34 +122,6 @@
         <p_1>今回の展示への感想をお聞かせください。今後の参考にいたします。</p_1>
     </section>
 
-    <section>
-        <h3>情報棟マップ</h3>
-        <p>1F</p>
-        <div style="text-align: center"><a href="photo\robot.png" data-lightbox="group"><img src="photo\robot.png" alt="" width="300"></a></div>
-        <p>2F</p>
-        <div style="text-align: center"><a href="photo\robot.png" data-lightbox="group"><img src="photo\robot.png" alt="" width="300"></a></div>
-        <p>3F</p>
-        <div style="text-align: center"><a href="photo\robot.png" data-lightbox="group"><img src="photo\robot.png" alt="" width="300"></a></div>
-        <p>4F</p>
-        <div style="text-align: center"><a href="photo\robot.png" data-lightbox="group"><img src="photo\robot.png" alt="" width="300"></a></div>
-    </section>
-
-    <section>
-        <h3>展示物紹介</h3>
-          <div style="text-align: center"><p><a href='robot.html'>ロボット</a></p></div>
-          <div style="text-align: center"><img src="photo\robot.png" width="50%" height="auto" alt="サンプル画像"></div>
-          <div style="text-align: center"><p><a href='VB.html'>バーチャルボウリング</a></p></div>
-          <div style="text-align: center"><img src="photo\VB.png" width="50%" height="auto" alt="サンプル画像"></div>
-          <div><p><a href='VR.html'>VR</a></p></div>
-          <div style="text-align: center"><img src="photo\VR.png" width="50%" height="auto" alt="サンプル画像"></div>
-          <div><p><a href='pin_ball.html'>ピンボール</a></p></div>
-          <div style="text-align: center"><img src="photo\pin_ball.png" width="50%" height="auto" alt="サンプル画像"></div>
-          <div><p><a href='photo_booth.html'>プリクラ</a></p></div>
-          <div style="text-align: center"><img src="photo\photo_booth.png" width="50%" height="auto" alt="サンプル画像"></div>
-          <div><p><a href='network_game.html'>ネットワークゲーム</a></p></div>
-          <div style="text-align: center"><img src="photo\network_game.png" width="50%" height="auto" alt="サンプル画像"></div>
-        </div>
-    </section>
   </div>
   </body>
 </html>
