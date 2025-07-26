@@ -52,15 +52,17 @@
     .sidebar {
       position: fixed;
       top: 0;
-      left: -240px;           /* 初期は左に隠す */
-      width: 240px;
-      height: 100%;
+      left: -100vw;            /* 画面外に完全に隠す */
+      width: 100vw;            /* 画面幅いっぱい */
+      height: 100vh;           /* 画面高さいっぱい */
       background: #fff;
-      border-right: 1px solid #ccc;
-      padding-top: 60px;
-      box-sizing: border-box;
       transition: left 0.3s ease;
       z-index: 1000;
+    }
+
+    /* open クラスで画面に表示 */
+    .sidebar.open {
+      left: 0;
     }
 
     /* チェックされたらスライドイン */
@@ -93,10 +95,10 @@
   <!-- 3. サイドバー本体 -->
   <nav class="sidebar">
     <ul>
-      <li><a href="Guide_Map.html">情報棟マップ</a></li>
-      <li><a href="Exhibit_Introduction.html">展示紹介</a></li>
-      <li><a href="Comment.html">学科展総括のありがたいお言葉</a></li>
-      <li><a href="#place">アンケート</a></li>
+      <p><a href="Guide_Map.html">情報棟マップ</a></p>
+      <p><a href="Exhibit_Introduction.html">展示紹介</a></p>
+      <p><a href="Comment.html">学科展総括のありがたいお言葉</a></p>
+      <p><a href="#place">アンケート</a></p>
     </ul>
   </nav>
 </body>
