@@ -68,3 +68,61 @@ p{
     display: flex;
     justify-content: space-around;
 }
+
+body.top {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+    font-family: 'Noto Serif JP', serif;
+    color: black;
+    font-size:100px;
+    text-align: center;
+    }
+
+    h2{
+    color: black;
+    font-size:30px;
+    text-align: center;
+    }
+
+    h3{
+    color: black;
+    font-size:25px;
+    text-align: center;
+    }
+
+    p{
+        color: black;
+        font-size:45px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+    font-family: 'Noto Serif JP', serif;
+    color: black;
+    font-size:200px;
+    text-align: center;
+    }
+
+    h2{
+    color: black;
+    font-size:60px;
+    text-align: center;
+    }
+
+    h3{
+    color: black;
+    font-size:50px;
+    text-align: center;
+    }
+    
+    p{
+        color: black;
+        font-size:45px;
+        text-align: center;
+    }
+}
