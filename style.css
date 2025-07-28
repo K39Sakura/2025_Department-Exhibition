@@ -23,8 +23,8 @@ body {
 /* ハンバーガーアイコン */
 .sidebar-icon::before {
   content: "≡";
-  font-size: 320px;
-  line-height: 320px;
+  font-size: 200px;
+  line-height: 200px;
   display: block;
   text-align: center;
 }
