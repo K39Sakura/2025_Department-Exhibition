@@ -12,7 +12,7 @@ body {
 /* ハンバーガー／クローズアイコン */
 .sidebar-icon {
   position: fixed;
-  top: 20px;
+  top: 5px;
   left: 20px;
   width: 32px;
   height: 32px;
@@ -24,8 +24,8 @@ body {
   /* ハンバーガーアイコン */
   .sidebar-icon::before {
     content: "≡";
-    font-size: 5px;
-    line-height: 5px;
+    font-size: 15px;
+    line-height: 15px;
     display: block;
     text-align: center;
   }
@@ -33,14 +33,18 @@ body {
   /* チェックされると「✕」に変える */
   #sidebar-toggle:checked + .sidebar-icon::before {
     content: "✕";
+    font-size: 15px;
+    line-height: 15px;
+    display: block;
+    text-align: center;
   }
 }
 
 /* ハンバーガーアイコン */
 .sidebar-icon::before {
   content: "≡";
-  font-size: 200px;
-  line-height: 200px;
+  font-size: 20px;
+  line-height: 20px;
   display: block;
   text-align: center;
 }
@@ -48,6 +52,10 @@ body {
 /* チェックされると「✕」に変える */
 #sidebar-toggle:checked + .sidebar-icon::before {
   content: "✕";
+  font-size: 20px;
+  line-height: 20px;
+  display: block;
+  text-align: center;
 }
 
 /* サイドバー本体 */
