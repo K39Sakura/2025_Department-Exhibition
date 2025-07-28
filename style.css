@@ -20,10 +20,19 @@ body {
   z-index: 1001;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 420px) {
+  /* ハンバーガーアイコン */
   .sidebar-icon::before {
-    font-size: 32px;
-    line-height: 32px;
+    content: "≡";
+    font-size: 5px;
+    line-height: 5px;
+    display: block;
+    text-align: center;
+  }
+
+  /* チェックされると「✕」に変える */
+  #sidebar-toggle:checked + .sidebar-icon::before {
+    content: "✕";
   }
 }
 
