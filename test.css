@@ -161,3 +161,15 @@ html, body {
   color: #333;
   padding: 30px;
 }
+
+.map-container {
+  width: 500px;
+  height: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  .map-container {
+    width: 100%;
+    height: 300px;
+  }
+}
