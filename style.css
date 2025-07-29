@@ -24,8 +24,8 @@ body {
   /* ハンバーガーアイコン */
   .sidebar-icon::before {
     content: "≡";
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 40px;
+    line-height: 40px;
     display: block;
     text-align: center;
   }
@@ -33,8 +33,8 @@ body {
   /* チェックされると「✕」に変える */
   #sidebar-toggle:checked + .sidebar-icon::before {
     content: "✕";
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 40px;
+    line-height: 40px;
     display: block;
     text-align: center;
   }
