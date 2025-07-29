@@ -65,11 +65,12 @@ body {
   left: -100vw;     /* 画面外に完全に隠す */
   width: 100vw;     /* 画面幅いっぱい */
   height: 100vh;    /* 画面高さいっぱい */
-  background: #ff0;
+  background-color: rgba(162, 162, 162, 0.97);
   transition: left 0.3s ease;
   z-index: 1000;
   display: grid;
   place-items: center;  /* 横・縦とも中央揃え */
+  
 }
 
 /* チェックされたらスライドイン */
