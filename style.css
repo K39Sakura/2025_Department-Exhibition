@@ -58,6 +58,16 @@ body {
   text-align: center;
 }
 
+/* ヘッダー上にあるときだけ白くするクラス*/
+body.over-header .sidebar-icon::before {
+  color: white;
+}
+
+body.over-header #sidebar-toggle:checked + .sidebar-icon::before {
+  /* チェック時の×アイコンも白に */
+  color: white;
+}
+
 /* サイドバー本体 */
 .sidebar {
   position: fixed;

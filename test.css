@@ -1,44 +1,3 @@
-/*@font-face {
-  font-family: 'Noto Serif JP';
-  font-style: normal;
-  font-weight: 400;
-  src: url('noto-serif-jp-regular.woff2') format('woff2'),
-       url('noto-serif-jp-regular.woff') format('woff');
-}
-@font-face {
-  font-family: 'Noto Serif JP';
-  font-style: normal;
-  font-weight: 700;
-  src: url('noto-serif-jp-bold.woff2') format('woff2'),
-       url('noto-serif-jp-bold.woff') format('woff');
-}*/
-
-/*body {
-    background: linear-gradient(84deg, #1A1C70, #4B509B, #6D7CCA, #8CB3F2, #B4C6E9);
-    background-size: 1000% 1000%;
-    animation: GradientBackground 10s ease infinite;
-}*/
-
-/* @keyframes GradientBackground {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}*/
-
-/*ul{
-    transform: rotate(-10deg);
-    -moz-transform: rotate(-10deg);
-    -webkit-transform: rotate(-10deg);
-}*/
-
 h1 {
     font-family: 'Noto Serif JP', serif;
     color: black;
@@ -153,7 +112,7 @@ html, body {
   background-size: cover;       /* 画像をヘッダー全体にフィットさせる */
   background-position: center;  /* 中央に配置 */
   background-repeat: no-repeat; /* 繰り返しなし */
-  min-height: 300px;                /* ヘッダーの高さを調整 */
+  min-height: 300px;            /* ヘッダーの高さを調整 */
 }
 
 .content-page {
