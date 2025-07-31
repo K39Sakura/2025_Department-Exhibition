@@ -133,9 +133,13 @@ html, body {
 }
 
 .content-page {
-  background-color: #f2f2f2;
+  background-color: #e4e4e4;
   color: #333;
   padding: 30px;
+}
+
+.pages {
+  background-color: #330e0e;
 }
 
 .map-container {
