@@ -68,15 +68,17 @@
     const icon   = document.querySelector('.sidebar-icon');
 
     // Intersection Observerでヘッダーの表示を監視
-    const observer = new IntersectionObserver(entries => {
+    const callback = (entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if (entry.intersectionRatio >= 0.5) {
           icon.classList.add('white-icon');
-        } else {
+        }
+        else {
           icon.classList.remove('white-icon');
         }
       });
     });
+    const observer = new IntersectionObserver(callback, { threshold: 0.5 })
     observer.observe(header);
   </script>
 

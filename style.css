@@ -19,7 +19,8 @@ body {
   height: 32px;
   cursor: pointer;
   z-index: 1001;
-  transition: color 0.0s;  /* 色がゆっくり変わる */
+  /*transition: color 0.0s;*/  /* 色がゆっくり変わる */
+  transition: transform 0.0s;
 }
 
 .sidebar-icon.white-icon {
