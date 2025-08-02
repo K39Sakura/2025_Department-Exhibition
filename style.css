@@ -19,6 +19,11 @@ body {
   height: 32px;
   cursor: pointer;
   z-index: 1001;
+  transition: color 0.3s;  /* 色がゆっくり変わる */
+}
+
+.sidebar-icon.white-icon {
+  color: #fef4f4;          /* アイコンの色を白に */
 }
 
 @media screen and (max-width: 420px) {

@@ -25,15 +25,15 @@
       <li><a href="index.html" style="font-size: 20px;">TOP</a></li>
       <li><a href="Guide_Map.html" style="font-size: 20px;">情報棟マップ</a></li>
       <li><a href="Exhibit_Introduction.html" style="font-size: 20px;">展示紹介</a></li>
-      <li><a href="Comment.html" style="font-size: 20px;">学科展総括のありがたいお言葉</a></li>
+      <li><a href="Comment.html" style="font-size: 20px;">学科展総括からの一言</a></li>
       <li><a href="survey.html" style="font-size: 20px;">アンケート</a></li>
     </ul>
   </nav>
 
   <!-- ヘッダー -->
-  <header class="page header-page">
-    <h2>第61回 苫小牧高専 学校祭</h2>
-    <h1>情報科学・工学系 学科展</h1>
+  <header class="page header-page" id="page-header">
+    <h1 style="font-size:30px; color: #fef4f4;">第61回 苫小牧高専 学校祭</h1>
+    <h1 style="color: #fef4f4;">情報科学・工学系 学科展</h1>
   </header>
 
   <!-- コンテンツ -->
@@ -61,6 +61,24 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" defer></script>
   <script src="js/sample.js"></script>
+
+  <script>
+    // ヘッダーとアイコンを見つける
+    const header = document.getElementById('page-header');
+    const icon   = document.querySelector('.sidebar-icon');
+
+    // Intersection Observerでヘッダーの表示を監視
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          icon.classList.add('white-icon');
+        } else {
+          icon.classList.remove('white-icon');
+        }
+      });
+    });
+    observer.observe(header);
+  </script>
 
 </body>
 </html>
