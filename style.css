@@ -11,7 +11,7 @@ body {
 
 /* ハンバーガー／クローズアイコン */
 .sidebar-icon {
-  color:rgb(0, 0, 0);
+  color:#080808;  /* アイコンの色を濡羽色 */
   position: fixed;
   top: 15px;
   left: 20px;
@@ -24,7 +24,7 @@ body {
 }
 
 .sidebar-icon.white-icon {
-  color: #fef4f4;          /* アイコンの色を白に */
+  color: #fef4f4;   /* アイコンの色を桜 */
 }
 
 @media screen and (max-width: 420px) {
@@ -100,4 +100,57 @@ body {
 .sidebar a {
   text-decoration: none;
   color: #333;
+}
+
+.Exhibit_Introduction-menu
+{
+  padding: 0.5em 1em;
+  margin-top: 0.4rem;
+}
+
+/* summaryのデフォルトマーカーを消す */
+/* Chrome/Safari */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Firefox */
+summary::-moz-list-bullet {
+  display: none;
+}
+
+/* summaryの見た目 */
+details > summary{
+  display: inline-flex;
+  align-items: center;    /* 上下中央揃え */
+  cursor: pointer;
+}
+
+details > summary::after {
+  content: '+';
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  line-height: 1.2em;
+
+  line-height: 1.2em;          /* テキストを縦方向中央に */
+  text-align: center;          /* テキストを横方向中央に */
+  margin-left: 0.5em;          /* テキストとの隙間 */
+  border: 1px solid #333;      /* 枠線の色・太さ */
+
+  margin-left: 0.5em;                /* テキストとの隙間 */
+  transition: transform 0.2s ease;
+  vertical-align: middle;
+  background-color: rgba(255, 255, 255,0.5);
+}
+
+/* open時：矢印を下向きに */
+details[open] > summary::after {
+  /*transform: rotate(90deg);*/   /* ▶ を ▼ みたいにする */
+  content: '-';
+  display: inline-block;
+  margin-left: 0.5em;                /* テキストとの隙間 */
+  transition: transform 0.2s ease;
+  vertical-align: middle;
+  background-color: rgba(255, 255, 255,0.5);  
 }
