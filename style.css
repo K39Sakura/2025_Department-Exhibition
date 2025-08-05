@@ -11,7 +11,7 @@ body {
 
 /* ハンバーガー／クローズアイコン */
 .sidebar-icon {
-  color:#080808;  /* アイコンの色を濡羽色 */
+  color:#080808;  /* アイコンの色を濡羽色に */
   position: fixed;
   top: 15px;
   left: 20px;
@@ -24,7 +24,7 @@ body {
 }
 
 .sidebar-icon.white-icon {
-  color: #fef4f4;   /* アイコンの色を桜 */
+  color: #fef4f4;   /* アイコンの色を桜色に */
 }
 
 @media screen and (max-width: 420px) {
@@ -44,6 +44,7 @@ body {
     line-height: 50px;
     display: block;
     text-align: center;
+    color:#080808;  /* アイコンの色を濡羽色に */
   }
 }
 
@@ -63,6 +64,7 @@ body {
   line-height: 40px;
   display: block;
   text-align: center;
+  color:#080808;  /* アイコンの色を濡羽色に */
 }
 
 /* サイドバー本体 */
@@ -72,7 +74,7 @@ body {
   left: -100vw;     /* 画面外に完全に隠す */
   width: 100vw;     /* 画面幅いっぱい */
   height: 100vh;    /* 画面高さいっぱい */
-  background-color: rgba(162, 162, 162, 0.97);
+  background-color: rgba(185, 185, 185, 0.97);/*銀鼠色*/
   transition: left 0.3s ease;
   z-index: 1000;
   display: grid;
@@ -141,16 +143,15 @@ details > summary::after {
   margin-left: 0.5em;                /* テキストとの隙間 */
   transition: transform 0.2s ease;
   vertical-align: middle;
-  background-color: rgba(255, 255, 255,0.5);
+  background-color: rgba(228, 229, 230,0.5);/*白金*/
 }
 
-/* open時：矢印を下向きに */
+/* open時 */
 details[open] > summary::after {
-  /*transform: rotate(90deg);*/   /* ▶ を ▼ みたいにする */
   content: '-';
   display: inline-block;
   margin-left: 0.5em;                /* テキストとの隙間 */
   transition: transform 0.2s ease;
   vertical-align: middle;
-  background-color: rgba(255, 255, 255,0.5);  
+  background-color: rgba(228, 229, 230,0.5);/*白金*/
 }
