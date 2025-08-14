@@ -49,6 +49,11 @@ li {
   overflow: hidden;
 }*/
 
+.adaptive-img {
+  width: 30%;
+  height: auto;
+}
+
 @media screen and (max-width: 768px) {
   h1 {
     font-family: 'Noto Serif JP', serif;
@@ -73,6 +78,11 @@ li {
     color: black;
     font-size:45px;
     text-align: center;
+  }
+
+  .adaptive-img {
+    width: 70%;
+    height: auto;
   }
 }
 
