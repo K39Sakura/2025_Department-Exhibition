@@ -96,7 +96,14 @@ body {
 /* メニューアイテム */
 .sidebar li {
   padding: 0.5em 1em;
+  line-height: normal;
 }
+
+/*.sidebar .Exbit_Introduction-menu ol{*/
+  /*line-height: normal;*/
+  /*margin-top: -0.125em;*/
+  /*margin-bottom: -2em;*/
+/*}*/
 
 /* リンクスタイル */
 .sidebar a {
@@ -104,11 +111,11 @@ body {
   color: #333;
 }
 
-.Exbit_Introduction-menu
-{
-  padding: 0.5em 1em;
-  margin-top: 0.4rem;
-}
+/*.Exbit_Introduction-menu*/
+/*{*/
+  /*padding: 0.5em 1em;*/
+  /*margin-top: 0.4rem;*/
+/*}*/
 
 /* summaryのデフォルトマーカーを消す */
 /* Chrome/Safari */
@@ -155,4 +162,3 @@ details[open] > summary::after {
   vertical-align: middle;
   background-color: rgba(228, 229, 230,0.5);/*白金*/
 }
-
