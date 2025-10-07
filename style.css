@@ -99,6 +99,11 @@ body {
   line-height: normal;
 }
 
+.sidebar :last-child ol{
+  margin: auto;
+  margin-bottom: -1em;
+}
+
 /*.sidebar .Exbit_Introduction-menu ol{*/
   /*line-height: normal;*/
   /*margin-top: -0.125em;*/
