@@ -48,15 +48,16 @@ body {
   }
 }
 
-/* ハンバーガーアイコン */
-.sidebar-icon::before {
-  content: "≡";
-  font-size: 40px;
-  line-height: 40px;
-  display: block;
-  text-align: center;
+@media screen and (max-width: 768px) {
+  /* ハンバーガーアイコン */
+  .sidebar-icon::before {
+    content: "≡";
+    font-size: 40px;
+    line-height: 40px;
+    display: block;
+    text-align: center;
+  }
 }
-
 /* チェックされると「✕」に変える */
 #sidebar-toggle:checked + .sidebar-icon::before {
   content: "✕";
@@ -116,7 +117,7 @@ body {
   color: #333;
 }
 
-/*.Exbit_Introduction-menu*/
+/*.Exhibit_Introduction-menu*/
 /*{*/
   /*padding: 0.5em 1em;*/
   /*margin-top: 0.4rem;*/

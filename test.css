@@ -216,3 +216,28 @@ x-sign:nth-of-type(1) {
     filter: saturate(200%) hue-rotate(20deg);
   }
 }
+
+.box {
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  width: 75%; /* 親要素に対して80%の幅 */
+  margin: 2em auto; /* 左右中央揃え */
+}
+.box .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -27px;
+  left: -3px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 17px;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+}
+.box p {
+  margin: 0; 
+  padding: 0;
+}
