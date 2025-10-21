@@ -241,3 +241,15 @@ x-sign:nth-of-type(1) {
   margin: 0; 
   padding: 0;
 }
+
+@media (prefers-color-scheme: dark) {
+  .dark-only {
+    display: block; /* または flex など、表示させたいスタイル */
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .dark-only {
+    display: none;
+  }
+}
