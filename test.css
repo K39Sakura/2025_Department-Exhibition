@@ -246,10 +246,18 @@ x-sign:nth-of-type(1) {
   .dark-only {
     display: block; /* または flex など、表示させたいスタイル */
   }
+
+  .light-only {
+    display: none;
+  }
 }
 
 @media (prefers-color-scheme: light) {
   .dark-only {
     display: none;
+  }
+
+  .light-only {
+    display: block; /* または flex など、表示させたいスタイル */
   }
 }
