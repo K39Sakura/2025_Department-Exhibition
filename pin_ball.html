@@ -8,6 +8,12 @@
   <!-- スタイルシート -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="test.css">
+
+  <!-- SplideのCSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+  <!-- SplideのJavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 </head>
 <body>
 
@@ -41,11 +47,46 @@
   <!-- メインコンテンツ -->
   <main >
     <h2 style="text-align: center;">ピンボール</h2>
-    <img src="photo/pin_ball.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ピンボール展示画像">
+    <img src="photo/pin_ball1.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ピンボール展示画像">
     <p style="font-size: 130%; padding-right:18px; padding-left:18px; font-weight: bold;">昔ながらのゲームであるピンボール<br>発射したボールを左右のフリッパーではじいて、得点を重ねる古典的なゲームである</p>
     <p style="text-align: left; font-size: 115%; text-indent:18px; line-height: 1.5; padding-right:18px; padding-left:18px;">私たちピンボール班は、シンプルながら情報系の知識を利用して、ピンボールを制作しました。PS4コントローラーで簡単に操作できるので、ぜひ遊んで、高得点を狙って、得点を競ってみてください！</p>
-    <!-- 展示内容や説明文などをここに追加可能です -->
+    <p style="font-size: 130%; padding-right:18px; padding-left:18px; font-weight: bold;">活動の様子</p>
+    <section id="image-carousel" class="splide" aria-label="ピンボール班写真">
+      <div class="splide__track">
+		    <ul class="splide__list">
+			    <li class="splide__slide">
+				    <img src="photo/pin_ball2.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ロボット展示画像">
+			    </li>
+          <li class="splide__slide">
+				    <img src="photo/pin_ball3.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ロボット展示画像">
+			    </li>
+          <li class="splide__slide">
+				    <img src="photo/pin_ball4.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ロボット展示画像">
+			    </li>
+          <li class="splide__slide">
+				    <img src="photo/pin_ball5.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ロボット展示画像">
+			    </li>
+          <li class="splide__slide">
+				    <img src="photo/pin_ball6.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ロボット展示画像">
+			    </li>
+          <li class="splide__slide">
+				    <img src="photo/pin_ball7.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ロボット展示画像">
+			    </li>
+          <li class="splide__slide">
+				    <img src="photo/pin_ball8.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ロボット展示画像">
+			    </li>
+          <li class="splide__slide">
+				    <img src="photo/pin_ball9.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="ロボット展示画像">
+			    </li>
+		    </ul>
+      </div>
+    </section>
+    <br>
   </main>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#image-carousel', {type: 'loop',heightRatio: 0.75}).mount();
+    });
+  </script>
 </body>
 </html>

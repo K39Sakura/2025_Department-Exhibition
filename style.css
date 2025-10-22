@@ -159,3 +159,11 @@ details[open] > summary::after {
   vertical-align: middle;
   background-color: rgba(228, 229, 230,0.5);/*白金*/
 }
+
+.splide__slide img {
+  width: 80%;        /* スライドの幅に合わせて画像を広げる */
+  height: 100%;       /* 縦横比を保ったまま高さを自動調整 */
+  object-fit: cover;  /* はみ出す部分を切り取って表示（必要に応じて） */
+  display: block;
+  margin: 0 auto;
+}
