@@ -8,6 +8,12 @@
   <!-- スタイルシート -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="test.css">
+  
+  <!-- SplideのCSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+  <!-- SplideのJavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 </head>
 <body>
 
@@ -41,11 +47,46 @@
   <!-- メインコンテンツ -->
   <main >
     <h2 style="text-align: center;">バーチャルボウリング</h2>
-    <img src="photo/VB (2).jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="バーチャルボウリング展示画像">
+    <img src="photo/VB2.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="バーチャルボウリング展示画像">
     <p style="font-size: 130%; padding-right:18px; padding-left:18px; font-weight: bold;">ストライクをねらえ！<br>バーチャルの世界で爽快ボウリング！</p>
     <p style="text-align: left; font-size: 115%; text-indent:18px; line-height: 1.5; padding-right:18px; padding-left:18px;">最新のバーチャル体験で楽しむボウリング！ 実際にボールを投げると、ゲーム画面にボールが出現！ピンをたくさん倒そう！友達とスコアを競ったり、ストライクを狙ったり、盛り上がること間違いなし！普段は味わえないバーチャルの爽快感を、高専祭で体験してみませんか？</p>
-    <!-- 展示の詳細・写真・説明文など追加可能 -->
+    <p style="text-align: left; font-size: 115%; text-indent:18px; line-height: 1.5; padding-right:18px; padding-left:18px;">ゲームを遊ぶ際のお願いとして、気持ちよく遊んでいただくため、以下の点にご協力をお願いします。</p>
+    <ul>
+      <li style="font-size: 115%; list-style-type: style type circle; line-height: 1.5; padding-left:0%; padding-right:18px;">コントローラーやPCなどの機材は丁寧に扱ってください。</li>
+      <li style="font-size: 115%; list-style-type: style type circle; line-height: 1.5; padding-left:0%; padding-right:18px;">他のお客様の迷惑となる行為（例：順番を守らない、長時間にわたるゲームの独占など）はお控えください。</li>
+    </ul>      
+    <p style="text-align: left; font-size: 115%; text-indent:18px; line-height: 1.5; padding-right:18px; padding-left:18px;">皆様のルールを守った楽しい体験を、班員一同お待ちしています！ ぜひ、私たちの作品を体験しに来てください！</p>
+    <p style="font-size: 130%; padding-right:18px; padding-left:18px; font-weight: bold;">活動の様子</p>
+    <section id="image-carousel" class="splide" aria-label="ピンボール班写真">
+      <div class="splide__track">
+		    <ul class="splide__list">
+			    <li class="splide__slide">
+				    <img src="photo/VB1.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="VB展示画像">
+			    </li>
+          <li class="splide__slide">
+				    <img src="photo/VB4.png" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="VB展示画像">
+          </li>
+          <li class="splide__slide">
+				    <img src="photo/VB5.png" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="VB展示画像">
+          </li>
+          <li class="splide__slide">
+				    <img src="photo/VB6.png" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="VB展示画像">
+          </li>
+          <li class="splide__slide">
+				    <img src="photo/VB7.png" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="VB展示画像">
+          </li>
+          <li class="splide__slide">
+				    <img src="photo/VB8.png" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="VB展示画像">
+          </li>
+		    </ul>
+      </div>
+    </section>
+    <br>
   </main>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#image-carousel', {type: 'loop',heightRatio: 0.75}).mount();
+    });
+  </script>
 </body>
 </html>

@@ -8,6 +8,12 @@
   <!-- スタイルシート -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="test.css">
+
+  <!-- SplideのCSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+  <!-- SplideのJavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 </head>
 <body>
 
@@ -46,8 +52,21 @@
     <p style="text-align: left; font-size: 115%; text-indent:18px; line-height: 1.5; padding-right:18px; padding-left:18px;">私たちは、オリジナルのプリクラシステムを開発しました。このプリクラでは、友達やグループで撮った写真に落書きをして楽しくデコレーションできます。撮影した写真はその場で印刷できるので、思い出をすぐに持ち帰ることができます。</p>
     <p style="text-align: left; font-size: 115%; text-indent:18px; line-height: 1.5; padding-right:18px; padding-left:18px;">さらに今年は、新機能として「スタンプ機能」と「背景選択機能」を追加しました。撮影後にスタンプを貼ったり、背景を自由に選んだりして、好みのスタイルに仕上げられるため、よりオリジナル感あふれるプリクラを楽しめます。</p>
     <p style="text-align: left; font-size: 115%; text-indent:18px; line-height: 1.5; padding-right:18px; padding-left:18px;">ぜひ学科展で体験してみてください！</p>
-    <!-- プリクラ展示の説明や写真などをここに追加できます -->
+    <p style="font-size: 130%; padding-right:18px; padding-left:18px; font-weight: bold;">活動の様子</p>
+    <section id="image-carousel" class="splide" aria-label="ピンボール班写真">
+      <div class="splide__track">
+		    <ul class="splide__list">
+			    <li class="splide__slide">
+				    <img src="photo/photo_booth.png" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="プリクラ展示画像">
+			    </li>
+		    </ul>
+      </div>
+    </section>
   </main>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#image-carousel', {type: 'loop',heightRatio: 0.75}).mount();
+    });
+  </script>
 </body>
 </html>
