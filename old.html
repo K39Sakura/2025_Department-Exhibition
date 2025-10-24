@@ -8,6 +8,12 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="test.css">
+
+  <!-- SplideのCSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+  <!-- SplideのJavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 </head>
 
 <body style="background-color: #d8d6d7;"><!--霞色-->
@@ -44,13 +50,39 @@
     <h2>旧情報棟</h2>
     <p>旧情報棟が気になった方、<br>スマホの画面設定が偶然ダークモードだった方、<br>ようこそ、隠しページへ……。</p>
     <p>数枚の写真のみですが、<br>旧情報棟の雰囲気をお楽しみください。</p>
-    <img src="photo/old_1.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="old_1">
+    <!--<img src="photo/old_1.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="old_1">-->
+    <!--<br>-->
+    <!--<img src="photo/old_2.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="old_2">-->
+    <!--<br>-->
+    <!--<img src="photo/old_3.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="old_3">-->
+    <!--<br>-->
+    <section id="image-carousel" class="splide" aria-label="旧情報棟写真">
+      <div class="splide__track">
+		    <ul class="splide__list">
+			    <li class="splide__slide">
+				    <img src="photo/old_1.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="旧情報棟画像">
+			    </li>
+          <li class="splide__slide">
+				    <img src="photo/old_2.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="旧情報棟画像">
+			    </li>
+          <li class="splide__slide">
+				    <img src="photo/old_3.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="旧情報棟画像">
+          </li>
+		    </ul>
+      </div>
+    </section>
     <br>
-    <img src="photo/old_2.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="old_2">
-    <br>
-    <img src="photo/old_3.jpg" style="display: block; margin: 0 auto;" width="80%" height="auto" alt="old_3">
-    <br>
+    <div class="parent">
+      <div class="balloon">
+        <p>Thanks for looking♪</p>
+      </div>
+    </div>
+    <img src="photo/only_yamamoto.png" style="display: block; margin: 0 auto;" width="auto" height="50%" alt="only_yamamoto">
   </main>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#image-carousel', {type: 'loop',heightRatio: 0.75}).mount();
+    });
+  </script>
 </body>
 </html>
